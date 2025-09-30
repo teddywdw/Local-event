@@ -1,0 +1,10 @@
+{
+  // Honor EditorConfig
+  "editor.useEditorConfig": true,
+  // Ensure trailing whitespace is trimmed on save
+  "files.trimTrailingWhitespace": true,
+  // Ensure a final newline is inserted at EOF
+  "files.insertFinalNewline": true,
+  // Prefer LF for the file types we're standardizing (VS Code respects EditorConfig, but this helps globally)
+  "files.eol": "\n"
+}

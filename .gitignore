@@ -6,6 +6,7 @@ __pycache__/
 .mypy_cache/
 .venv/
 /.vscode/
+!.vscode/settings.json
 dist/
 build/
 *.egg-info/
