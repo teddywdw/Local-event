@@ -1,0 +1,760 @@
+{
+    "data": {
+        "viewer": {
+            "suggested_events": {
+                "events": {
+                    "edges": [
+                        {
+                            "node": {
+                                "id": "3095428473996911",
+                                "schema_context": null,
+                                "is_hosted_by_ticket_master": false,
+                                "cover_photo": {
+                                    "photo": {
+                                        "accessibility_caption": "May be an image of 1 person, drink and text that says 'OLD FASHIONED MONTH only at Pour POUR CRAFT BEER CRAFTBEER&SPIRITS & SPIRITS EVERY SATURDAY IN OCT TRY 3 NEW OLD FASHIONEDS!'",
+                                        "image": {
+                                            "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/549564641_1370922985040594_876540263778411604_n.jpg?stp=c0.54.1920.916a_dst-jpg_s320x320_tt6&_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=4UWsZYo9hGoQ7kNvwE9Mgp3&_nc_oc=AdmyoFttZI74R_8KeFMEg7r9hWltHMKSyEivMuyjNb8SJS07uHTtDi7EUTiGFw9d-S_atovYVEKAYjbHufIHY7NS&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfYd1fDDQfPmRn1WU0f_b9zvLhBczMkBrK0nQwHXGLIz_g&oe=68E0DDDF"
+                                        },
+                                        "id": "1370922981707261"
+                                    }
+                                },
+                                "cover_video": null,
+                                "gif_cover_photo": null,
+                                "online_event_setup": null,
+                                "is_happening_now": false,
+                                "day_time_sentence": "This Saturday at 9u202fPM",
+                                "name": "Old Fashioned Month at Pour",
+                                "social_context": {
+                                    "text": "142 interested u00b7 8 going",
+                                    "ranges": []
+                                },
+                                "is_online": false,
+                                "ticketing_context_row": {
+                                    "price_range_text": null
+                                },
+                                "event_place": {
+                                    "__typename": "FreeformPlace",
+                                    "contextual_name": "4400 S 70th St #100, Lincoln, NE, United States, Nebraska 68516",
+                                    "__isNode": "FreeformPlace",
+                                    "id": "1370922961707263"
+                                },
+                                "is_hot_event": false,
+                                "ticket_selling_status": null,
+                                "eventUrl": "https://www.facebook.com/events/3095428473996911/",
+                                "can_page_viewer_invite_as_user": false,
+                                "can_viewer_invite": true,
+                                "can_viewer_rsvp": true,
+                                "can_viewer_share": true,
+                                "event_kind": "PUBLIC_TYPE",
+                                "if_viewer_can_duplicate_event": null,
+                                "is_online_or_detected_online": false,
+                                "is_past": false,
+                                "is_viewer_host": false,
+                                "start_timestamp": 1759629600,
+                                "rsvp_button_renderer": {
+                                    "__typename": "PublicRsvpStyleRenderer",
+                                    "event": {
+                                        "id": "3095428473996911",
+                                        "connection_style": "INTERESTED",
+                                        "can_viewer_join": true,
+                                        "can_viewer_watch": true,
+                                        "can_viewer_unwatch": false,
+                                        "viewer_watch_status": "UNWATCHED",
+                                        "if_viewer_can_see_going_button": {
+                                            "__typename": "Event",
+                                            "id": "3095428473996911"
+                                        },
+                                        "event_connection_data_privacy_scope": null,
+                                        "privacy_scope_for_toast": null,
+                                        "can_join_group_chat": false,
+                                        "created_for_group": null,
+                                        "chat": null
+                                    },
+                                    "__module_operation_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"
+                                    },
+                                    "__module_component_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer.react"
+                                    }
+                                },
+                                "parent_if_exists_or_self": {
+                                    "online_event_setup": null,
+                                    "id": "3095428473996911"
+                                },
+                                "live_virtual_event_info": null,
+                                "__typename": "Event"
+                            },
+                            "cursor": null
+                        },
+                        {
+                            "node": {
+                                "id": "1681080602589800",
+                                "schema_context": null,
+                                "is_hosted_by_ticket_master": false,
+                                "cover_photo": {
+                                    "photo": {
+                                        "accessibility_caption": "May be a doodle of text that says 'POUR CRAFT CRAFTBEER&SPIRITS BEER SPIRITS CHRISTINEKORSAKAS CHRISTINE KORSAKAS FIRST FRIDAY OCTOBER 3 5:00PM-8:00PM 5:00PM 8:00PM'",
+                                        "image": {
+                                            "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/549859844_1371829818283244_7322212163766903259_n.jpg?stp=c0.54.1920.916a_dst-jpg_s320x320_tt6&_nc_cat=110&ccb=1-7&_nc_sid=75d36f&_nc_ohc=lnCBqvid2vgQ7kNvwGtJADE&_nc_oc=AdkIFRV9_iD52ovYliZ4by3UrxL02JJ0_57t84VxZlYzXYM3EFc0LYoKcpkF3EkH6etqo7jPVFOc5kpuFDxVlF5h&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfbqyMN1iUIhyWd4oCphCuWt5Cz5t8LAdrBoIRce3DfkUw&oe=68E0AAEC"
+                                        },
+                                        "id": "1371829814949911"
+                                    }
+                                },
+                                "cover_video": null,
+                                "gif_cover_photo": null,
+                                "online_event_setup": null,
+                                "is_happening_now": false,
+                                "day_time_sentence": "This Friday at 5u202fPM",
+                                "name": "First Friday - Christine Korsakas",
+                                "social_context": {
+                                    "text": "21 interested u00b7 9 going",
+                                    "ranges": []
+                                },
+                                "is_online": false,
+                                "ticketing_context_row": {
+                                    "price_range_text": null
+                                },
+                                "event_place": {
+                                    "__typename": "FreeformPlace",
+                                    "contextual_name": "4400 S 70th St #100, Lincoln, NE",
+                                    "__isNode": "FreeformPlace",
+                                    "id": "1372887158177510"
+                                },
+                                "is_hot_event": false,
+                                "ticket_selling_status": null,
+                                "eventUrl": "https://www.facebook.com/events/1681080602589800/",
+                                "can_page_viewer_invite_as_user": false,
+                                "can_viewer_invite": true,
+                                "can_viewer_rsvp": true,
+                                "can_viewer_share": true,
+                                "event_kind": "PUBLIC_TYPE",
+                                "if_viewer_can_duplicate_event": null,
+                                "is_online_or_detected_online": false,
+                                "is_past": false,
+                                "is_viewer_host": false,
+                                "start_timestamp": 1759528800,
+                                "rsvp_button_renderer": {
+                                    "__typename": "PublicRsvpStyleRenderer",
+                                    "event": {
+                                        "id": "1681080602589800",
+                                        "connection_style": "INTERESTED",
+                                        "can_viewer_join": true,
+                                        "can_viewer_watch": true,
+                                        "can_viewer_unwatch": false,
+                                        "viewer_watch_status": "UNWATCHED",
+                                        "if_viewer_can_see_going_button": {
+                                            "__typename": "Event",
+                                            "id": "1681080602589800"
+                                        },
+                                        "event_connection_data_privacy_scope": null,
+                                        "privacy_scope_for_toast": null,
+                                        "can_join_group_chat": false,
+                                        "created_for_group": null,
+                                        "chat": null
+                                    },
+                                    "__module_operation_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"
+                                    },
+                                    "__module_component_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer.react"
+                                    }
+                                },
+                                "parent_if_exists_or_self": {
+                                    "online_event_setup": null,
+                                    "id": "1681080602589800"
+                                },
+                                "live_virtual_event_info": null,
+                                "__typename": "Event"
+                            },
+                            "cursor": null
+                        },
+                        {
+                            "node": {
+                                "id": "1220598276326282",
+                                "schema_context": null,
+                                "is_hosted_by_ticket_master": false,
+                                "cover_photo": {
+                                    "photo": {
+                                        "accessibility_caption": "No photo description available.",
+                                        "image": {
+                                            "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/492072438_1085183146962053_4459496800882810178_n.jpg?stp=c0.47.1640.782a_dst-jpg_s320x320_tt6&_nc_cat=106&ccb=1-7&_nc_sid=75d36f&_nc_ohc=3kILhdyyTNMQ7kNvwFoWsiH&_nc_oc=AdngGdH9wH5xH_FPYnw1sS9zI38dOrGFkLORYvoS3ot77Tl6Q59hVC51XlCeuHPqHOzrcUfkbXp9rL-247NsNMIT&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfaVIL7aRxoChfF1hBCWfNbiyD9L4RRs8pt5EDs4GlUzYg&oe=68E0B881"
+                                        },
+                                        "id": "1085183143628720"
+                                    }
+                                },
+                                "cover_video": null,
+                                "gif_cover_photo": null,
+                                "online_event_setup": null,
+                                "is_happening_now": false,
+                                "day_time_sentence": "This Friday at 5:30u202fPM",
+                                "name": "Live Music Fridays",
+                                "social_context": {
+                                    "text": "7 interested u00b7 1 going",
+                                    "ranges": []
+                                },
+                                "is_online": false,
+                                "ticketing_context_row": {
+                                    "price_range_text": null
+                                },
+                                "event_place": {
+                                    "__typename": "FreeformPlace",
+                                    "contextual_name": "1746 N Street, Lincoln, NE, United States, Nebraska 68508",
+                                    "__isNode": "FreeformPlace",
+                                    "id": "1085183053628729"
+                                },
+                                "is_hot_event": false,
+                                "ticket_selling_status": null,
+                                "eventUrl": "https://www.facebook.com/events/1220598276326282/",
+                                "can_page_viewer_invite_as_user": false,
+                                "can_viewer_invite": true,
+                                "can_viewer_rsvp": true,
+                                "can_viewer_share": true,
+                                "event_kind": "PUBLIC_TYPE",
+                                "if_viewer_can_duplicate_event": null,
+                                "is_online_or_detected_online": false,
+                                "is_past": false,
+                                "is_viewer_host": false,
+                                "start_timestamp": 1759530600,
+                                "rsvp_button_renderer": {
+                                    "__typename": "PublicRsvpStyleRenderer",
+                                    "event": {
+                                        "id": "1220598276326282",
+                                        "connection_style": "INTERESTED",
+                                        "can_viewer_join": true,
+                                        "can_viewer_watch": true,
+                                        "can_viewer_unwatch": false,
+                                        "viewer_watch_status": "UNWATCHED",
+                                        "if_viewer_can_see_going_button": {
+                                            "__typename": "Event",
+                                            "id": "1220598276326282"
+                                        },
+                                        "event_connection_data_privacy_scope": null,
+                                        "privacy_scope_for_toast": null,
+                                        "can_join_group_chat": false,
+                                        "created_for_group": null,
+                                        "chat": null
+                                    },
+                                    "__module_operation_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"
+                                    },
+                                    "__module_component_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer.react"
+                                    }
+                                },
+                                "parent_if_exists_or_self": {
+                                    "online_event_setup": null,
+                                    "id": "1220598199659623"
+                                },
+                                "live_virtual_event_info": null,
+                                "__typename": "Event"
+                            },
+                            "cursor": null
+                        },
+                        {
+                            "node": {
+                                "id": "1652776882283004",
+                                "schema_context": null,
+                                "is_hosted_by_ticket_master": false,
+                                "cover_photo": {
+                                    "photo": {
+                                        "accessibility_caption": "May be an image of text that says 'you'r or Bring cards Cards NO COVER 21+ own games games! G GAME E THURSDAYS A IMI INI INIGHIT HIT KI u12dd DAME'",
+                                        "image": {
+                                            "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/540143050_122216245586133881_6792674191728741117_n.jpg?stp=c0.112.940.449a_dst-jpg_s320x320_tt6&_nc_cat=104&ccb=1-7&_nc_sid=75d36f&_nc_ohc=V5x3j0aMGssQ7kNvwHaShIw&_nc_oc=AdlBYfLn1-gL3s01a-n1Lrnh6SIMP_94-28noiqcjaYjVR-IK53d-wLsVlMgZZZY2Q4P-duOc4_fFBu9BJi3DlTR&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfZqpjB_8F2mWqCsPh-fIsShJyP3MS2Kl38p4mG8ZnEgUg&oe=68E0B8AF"
+                                        },
+                                        "id": "122216245580133881"
+                                    }
+                                },
+                                "cover_video": null,
+                                "gif_cover_photo": null,
+                                "online_event_setup": null,
+                                "is_happening_now": false,
+                                "day_time_sentence": "This Thursday at 7u202fPM",
+                                "name": "Game Night at DAME",
+                                "social_context": {
+                                    "text": "8 interested u00b7 1 going",
+                                    "ranges": []
+                                },
+                                "is_online": false,
+                                "ticketing_context_row": {
+                                    "price_range_text": null
+                                },
+                                "event_place": {
+                                    "__typename": "FreeformPlace",
+                                    "contextual_name": "2713 North 48th street, Lincoln, NE, United States, Nebraska",
+                                    "__isNode": "FreeformPlace",
+                                    "id": "122216245556133881"
+                                },
+                                "is_hot_event": false,
+                                "ticket_selling_status": null,
+                                "eventUrl": "https://www.facebook.com/events/1652776882283004/",
+                                "can_page_viewer_invite_as_user": false,
+                                "can_viewer_invite": true,
+                                "can_viewer_rsvp": true,
+                                "can_viewer_share": true,
+                                "event_kind": "PUBLIC_TYPE",
+                                "if_viewer_can_duplicate_event": null,
+                                "is_online_or_detected_online": false,
+                                "is_past": false,
+                                "is_viewer_host": false,
+                                "start_timestamp": 1759449600,
+                                "rsvp_button_renderer": {
+                                    "__typename": "PublicRsvpStyleRenderer",
+                                    "event": {
+                                        "id": "1652776882283004",
+                                        "connection_style": "INTERESTED",
+                                        "can_viewer_join": true,
+                                        "can_viewer_watch": true,
+                                        "can_viewer_unwatch": false,
+                                        "viewer_watch_status": "UNWATCHED",
+                                        "if_viewer_can_see_going_button": {
+                                            "__typename": "Event",
+                                            "id": "1652776882283004"
+                                        },
+                                        "event_connection_data_privacy_scope": null,
+                                        "privacy_scope_for_toast": null,
+                                        "can_join_group_chat": false,
+                                        "created_for_group": null,
+                                        "chat": null
+                                    },
+                                    "__module_operation_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"
+                                    },
+                                    "__module_component_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer.react"
+                                    }
+                                },
+                                "parent_if_exists_or_self": {
+                                    "online_event_setup": null,
+                                    "id": "1652776845616341"
+                                },
+                                "live_virtual_event_info": null,
+                                "__typename": "Event"
+                            },
+                            "cursor": null
+                        },
+                        {
+                            "node": {
+                                "id": "4163830370527769",
+                                "schema_context": null,
+                                "is_hosted_by_ticket_master": false,
+                                "cover_photo": {
+                                    "photo": {
+                                        "accessibility_caption": "May be an image of text that says '3u0e29u0e1e u0e1bu0e2d u0e58 u0e18u0e23u0e22u0e34 MOUSS oUSS HAUNT HAUE UAI SCARO CIDER RELEASE PARTY 7PM OCTIAN WITH TRUE CRIME THEMED TRIVIA'",
+                                        "image": {
+                                            "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/552825494_1208462424634124_6433086290702326790_n.jpg?stp=c0.54.1920.916a_dst-jpg_s320x320_tt6&_nc_cat=108&ccb=1-7&_nc_sid=75d36f&_nc_ohc=oXlv6TLDlR0Q7kNvwE8JPyt&_nc_oc=AdmcUoOc6-e7hPEuHlfvmgCqhvLT691AhpIxNe-rjPA161IU6r8AacwplzG8D9ufL4KwQ8Awtf_yNn94-eEARVwj&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfY8dbNsSyFlTUCTaN7YDkox4nkvX3Vu54aJCbbrvftnEQ&oe=68E0BDD2"
+                                        },
+                                        "id": "1208462421300791"
+                                    }
+                                },
+                                "cover_video": null,
+                                "gif_cover_photo": null,
+                                "online_event_setup": null,
+                                "is_happening_now": false,
+                                "day_time_sentence": "This Wednesday at 7u202fPM",
+                                "name": "True Crime Themed Trivia + Scaro Cider Release Party",
+                                "social_context": {
+                                    "text": "Miles is going",
+                                    "ranges": [
+                                        {
+                                            "entity": {
+                                                "__typename": "User",
+                                                "__isProfile": "User",
+                                                "profilePicture": {
+                                                    "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-1/480941415_10232364888377555_5193707426504118567_n.jpg?stp=cp0_dst-jpg_s24x24_tt6&_nc_cat=104&ccb=1-7&_nc_sid=e99d92&_nc_ohc=ycjKIpdg1U8Q7kNvwFbpLVc&_nc_oc=AdmCDrNyFSO8999wWQQvHirzuL55llb4Lmvtvf7CG3bTzm0qPElIaxuL_6WwfkpocKY87mQLe-swkaggHcbaXOzQ&_nc_zt=24&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_Afbg1au-1XGzm2t_xD7iD-KSpsQgTATCk2xDeO6GNO5Z6g&oe=68E0C60E"
+                                                },
+                                                "__isNode": "User",
+                                                "id": "1615429791"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "is_online": false,
+                                "ticketing_context_row": {
+                                    "price_range_text": null
+                                },
+                                "event_place": {
+                                    "__typename": "FreeformPlace",
+                                    "contextual_name": "1746 N Street, Lincoln, NE, United States, Nebraska 68508",
+                                    "__isNode": "FreeformPlace",
+                                    "id": "1208462324634134"
+                                },
+                                "is_hot_event": false,
+                                "ticket_selling_status": null,
+                                "eventUrl": "https://www.facebook.com/events/4163830370527769/",
+                                "can_page_viewer_invite_as_user": false,
+                                "can_viewer_invite": true,
+                                "can_viewer_rsvp": true,
+                                "can_viewer_share": true,
+                                "event_kind": "PUBLIC_TYPE",
+                                "if_viewer_can_duplicate_event": null,
+                                "is_online_or_detected_online": false,
+                                "is_past": false,
+                                "is_viewer_host": false,
+                                "start_timestamp": 1759363200,
+                                "rsvp_button_renderer": {
+                                    "__typename": "PublicRsvpStyleRenderer",
+                                    "event": {
+                                        "id": "4163830370527769",
+                                        "connection_style": "INTERESTED",
+                                        "can_viewer_join": true,
+                                        "can_viewer_watch": true,
+                                        "can_viewer_unwatch": false,
+                                        "viewer_watch_status": "UNWATCHED",
+                                        "if_viewer_can_see_going_button": {
+                                            "__typename": "Event",
+                                            "id": "4163830370527769"
+                                        },
+                                        "event_connection_data_privacy_scope": null,
+                                        "privacy_scope_for_toast": null,
+                                        "can_join_group_chat": false,
+                                        "created_for_group": null,
+                                        "chat": null
+                                    },
+                                    "__module_operation_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"
+                                    },
+                                    "__module_component_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer.react"
+                                    }
+                                },
+                                "parent_if_exists_or_self": {
+                                    "online_event_setup": null,
+                                    "id": "4163830370527769"
+                                },
+                                "live_virtual_event_info": null,
+                                "__typename": "Event"
+                            },
+                            "cursor": null
+                        },
+                        {
+                            "node": {
+                                "id": "971044641304709",
+                                "schema_context": null,
+                                "is_hosted_by_ticket_master": false,
+                                "cover_photo": {
+                                    "photo": {
+                                        "accessibility_caption": "No photo description available.",
+                                        "image": {
+                                            "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/481157772_122191600028133881_6452560740621699703_n.jpg?stp=c0.161.1650.787a_dst-jpg_s320x320_tt6&_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=Zfs_uVNfWf0Q7kNvwF_bKhk&_nc_oc=Adklyj_AMxm5co12O_Mmd9RQaek-qYhUZJzin-kbACiLihnvds88up-uBbPfOEWjNAhQPnpTv4LZHodOJ-6N0ekj&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfbFxg53zs2V2XtaYpNRED8HGJnPNHZvYp6a9T-8WZjWaQ&oe=68E0C3EB"
+                                        },
+                                        "id": "122191600022133881"
+                                    }
+                                },
+                                "cover_video": null,
+                                "gif_cover_photo": null,
+                                "online_event_setup": null,
+                                "is_happening_now": false,
+                                "day_time_sentence": "Fri, Oct 10 at 8:30u202fPM",
+                                "name": "DAME DRAG NIGHT ",
+                                "social_context": {
+                                    "text": "3 interested u00b7 1 going",
+                                    "ranges": []
+                                },
+                                "is_online": false,
+                                "ticketing_context_row": {
+                                    "price_range_text": null
+                                },
+                                "event_place": {
+                                    "__typename": "FreeformPlace",
+                                    "contextual_name": "2713 North 48th street, Lincoln, NE, United States, Nebraska",
+                                    "__isNode": "FreeformPlace",
+                                    "id": "122217105020133881"
+                                },
+                                "is_hot_event": false,
+                                "ticket_selling_status": null,
+                                "eventUrl": "https://www.facebook.com/events/971044641304709/",
+                                "can_page_viewer_invite_as_user": false,
+                                "can_viewer_invite": true,
+                                "can_viewer_rsvp": true,
+                                "can_viewer_share": true,
+                                "event_kind": "PUBLIC_TYPE",
+                                "if_viewer_can_duplicate_event": null,
+                                "is_online_or_detected_online": false,
+                                "is_past": false,
+                                "is_viewer_host": false,
+                                "start_timestamp": 1760146200,
+                                "rsvp_button_renderer": {
+                                    "__typename": "PublicRsvpStyleRenderer",
+                                    "event": {
+                                        "id": "971044641304709",
+                                        "connection_style": "INTERESTED",
+                                        "can_viewer_join": true,
+                                        "can_viewer_watch": true,
+                                        "can_viewer_unwatch": false,
+                                        "viewer_watch_status": "UNWATCHED",
+                                        "if_viewer_can_see_going_button": {
+                                            "__typename": "Event",
+                                            "id": "971044641304709"
+                                        },
+                                        "event_connection_data_privacy_scope": null,
+                                        "privacy_scope_for_toast": null,
+                                        "can_join_group_chat": false,
+                                        "created_for_group": null,
+                                        "chat": null
+                                    },
+                                    "__module_operation_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"
+                                    },
+                                    "__module_component_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer.react"
+                                    }
+                                },
+                                "parent_if_exists_or_self": {
+                                    "online_event_setup": null,
+                                    "id": "971044631304710"
+                                },
+                                "live_virtual_event_info": null,
+                                "__typename": "Event"
+                            },
+                            "cursor": null
+                        },
+                        {
+                            "node": {
+                                "id": "2518495718508195",
+                                "schema_context": null,
+                                "is_hosted_by_ticket_master": false,
+                                "cover_photo": {
+                                    "photo": {
+                                        "accessibility_caption": "May be an image of 2 people, people playing football, people playing basketball and text that says 'BBRASKA . IOWA GAME DAY AT WITH THE SIDETRACK BAND BEFORE AND BETWEEN THE GAME AFTER H GAME SPORTS BAR& GRILL ube44 eeko |u |AND AND ECKO FRI. NOY. 28TH 11AM KICKOFF DOORS OPEN AT 8AM TAILGATE WITH TODAY'S BEST COUNTRY FR FRSGGY98 GGY98 AND THE HUSKER ALUMNI PEP BAND!'",
+                                        "image": {
+                                            "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/533112556_122162687744435788_3207897998597135902_n.jpg?stp=c0.54.1920.916a_dst-jpg_s320x320_tt6&_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=cfiMwxJ5qOEQ7kNvwGvPK6R&_nc_oc=AdliYrhQ5wciDM7HTZdf_DLvWQyJ_ueELresnVecFYkJm8ADIc3I7mtCXJpcunKG3Irq8mtb8fsMM_IJByIbR3eO&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfY5gTueJFsFHOwWeLZVUBFn3mkjN8WyfvkL8hio4YwIxQ&oe=68E0AFF5"
+                                        },
+                                        "id": "122162687738435788"
+                                    }
+                                },
+                                "cover_video": null,
+                                "gif_cover_photo": null,
+                                "online_event_setup": null,
+                                "is_happening_now": false,
+                                "day_time_sentence": "Fri, Nov 28 at 8u202fAM",
+                                "name": "Nebraska v. Iowa u0040 Big 10 Downtown with Ecko and The Sidetrack Band!",
+                                "social_context": {
+                                    "text": "29 interested u00b7 10 going",
+                                    "ranges": []
+                                },
+                                "is_online": false,
+                                "ticketing_context_row": {
+                                    "price_range_text": null
+                                },
+                                "event_place": {
+                                    "__typename": "FreeformPlace",
+                                    "contextual_name": "130 N 10th St, Lincoln, NE, United States, Nebraska 68508",
+                                    "__isNode": "FreeformPlace",
+                                    "id": "1348336333882418"
+                                },
+                                "is_hot_event": false,
+                                "ticket_selling_status": null,
+                                "eventUrl": "https://www.facebook.com/events/2518495718508195/",
+                                "can_page_viewer_invite_as_user": false,
+                                "can_viewer_invite": true,
+                                "can_viewer_rsvp": true,
+                                "can_viewer_share": true,
+                                "event_kind": "PUBLIC_TYPE",
+                                "if_viewer_can_duplicate_event": null,
+                                "is_online_or_detected_online": false,
+                                "is_past": false,
+                                "is_viewer_host": false,
+                                "start_timestamp": 1764338400,
+                                "rsvp_button_renderer": {
+                                    "__typename": "PublicRsvpStyleRenderer",
+                                    "event": {
+                                        "id": "2518495718508195",
+                                        "connection_style": "INTERESTED",
+                                        "can_viewer_join": true,
+                                        "can_viewer_watch": true,
+                                        "can_viewer_unwatch": false,
+                                        "viewer_watch_status": "UNWATCHED",
+                                        "if_viewer_can_see_going_button": {
+                                            "__typename": "Event",
+                                            "id": "2518495718508195"
+                                        },
+                                        "event_connection_data_privacy_scope": null,
+                                        "privacy_scope_for_toast": null,
+                                        "can_join_group_chat": false,
+                                        "created_for_group": null,
+                                        "chat": null
+                                    },
+                                    "__module_operation_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"
+                                    },
+                                    "__module_component_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer.react"
+                                    }
+                                },
+                                "parent_if_exists_or_self": {
+                                    "online_event_setup": null,
+                                    "id": "2518495718508195"
+                                },
+                                "live_virtual_event_info": null,
+                                "__typename": "Event"
+                            },
+                            "cursor": null
+                        },
+                        {
+                            "node": {
+                                "id": "522853177146649",
+                                "schema_context": null,
+                                "is_hosted_by_ticket_master": false,
+                                "cover_photo": {
+                                    "photo": {
+                                        "accessibility_caption": "No photo description available.",
+                                        "image": {
+                                            "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/490297036_1083891010448050_2019362763271741075_n.jpg?stp=c0.18.1200.573a_dst-jpg_s320x320_tt6&_nc_cat=102&ccb=1-7&_nc_sid=75d36f&_nc_ohc=RR9g_NMjQ5wQ7kNvwGGot5R&_nc_oc=AdkmdY-AYDxkmucGFj7B9njEwJ7AVhVN66klCkQDCs96AIk-hy5rKxW3wdQwbkVnJ8KF4xDA5SXoY9KDdI2xpsYM&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfZM8MFt9OWnTPNJJCZW7cm0vR3lYFxsxwUw7NVWu_nyCw&oe=68E0AAD2"
+                                        },
+                                        "id": "1059193459584472"
+                                    }
+                                },
+                                "cover_video": null,
+                                "gif_cover_photo": null,
+                                "online_event_setup": null,
+                                "is_happening_now": false,
+                                "day_time_sentence": "Tomorrow at 8u202fPM",
+                                "name": "Sleep Token: Even in Arcadia",
+                                "social_context": {
+                                    "text": "1.6K interested u00b7 767 going",
+                                    "ranges": []
+                                },
+                                "is_online": false,
+                                "ticketing_context_row": {
+                                    "price_range_text": null
+                                },
+                                "event_place": {
+                                    "__typename": "FreeformPlace",
+                                    "contextual_name": "400 Pinnacle Arena Dr, Lincoln, NE, United States, Nebraska 68508",
+                                    "__isNode": "FreeformPlace",
+                                    "id": "1059254759578342"
+                                },
+                                "is_hot_event": false,
+                                "ticket_selling_status": null,
+                                "eventUrl": "https://www.facebook.com/events/522853177146649/",
+                                "can_page_viewer_invite_as_user": false,
+                                "can_viewer_invite": true,
+                                "can_viewer_rsvp": true,
+                                "can_viewer_share": true,
+                                "event_kind": "PUBLIC_TYPE",
+                                "if_viewer_can_duplicate_event": null,
+                                "is_online_or_detected_online": false,
+                                "is_past": false,
+                                "is_viewer_host": false,
+                                "start_timestamp": 1759280400,
+                                "rsvp_button_renderer": {
+                                    "__typename": "PublicRsvpStyleRenderer",
+                                    "event": {
+                                        "id": "522853177146649",
+                                        "connection_style": "INTERESTED",
+                                        "can_viewer_join": true,
+                                        "can_viewer_watch": true,
+                                        "can_viewer_unwatch": false,
+                                        "viewer_watch_status": "UNWATCHED",
+                                        "if_viewer_can_see_going_button": {
+                                            "__typename": "Event",
+                                            "id": "522853177146649"
+                                        },
+                                        "event_connection_data_privacy_scope": null,
+                                        "privacy_scope_for_toast": null,
+                                        "can_join_group_chat": false,
+                                        "created_for_group": null,
+                                        "chat": null
+                                    },
+                                    "__module_operation_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"
+                                    },
+                                    "__module_component_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer.react"
+                                    }
+                                },
+                                "parent_if_exists_or_self": {
+                                    "online_event_setup": null,
+                                    "id": "522853177146649"
+                                },
+                                "live_virtual_event_info": null,
+                                "__typename": "Event"
+                            },
+                            "cursor": null
+                        },
+                        {
+                            "node": {
+                                "id": "1109936357990434",
+                                "schema_context": null,
+                                "is_hosted_by_ticket_master": false,
+                                "cover_photo": {
+                                    "photo": {
+                                        "accessibility_caption": "May be an image of u200etext that says 'u200eUNIVERSITY UIVERSITY OF NEBRASKA-LIN NEBRASKA-LINCOLN LINCOLN CORNSTOC 25 u0645 ud574u200e'u200e",
+                                        "image": {
+                                            "uri": "https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/542758834_1195678592590077_4463130468930903673_n.jpg?stp=c0.45.1600.764a_dst-jpg_s320x320_tt6&_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=FnMVWblkkp8Q7kNvwGJ5U27&_nc_oc=AdmD_KBlHzLdvIcAaFoyDhFzewoKiiWcWq5p3SrTdoPxiBTgxD7GWv6F6tuWmaLpTC8GqtAU9NdYunOhOkFNuJ08&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_Afa5xfjcPtwHdGcScicaSBCisoVmuWNT0vpIbsnY5HZLLQ&oe=68E0C8EE"
+                                        },
+                                        "id": "1195678589256744"
+                                    }
+                                },
+                                "cover_video": null,
+                                "gif_cover_photo": null,
+                                "online_event_setup": null,
+                                "is_happening_now": false,
+                                "day_time_sentence": "This Friday at 5u202fPM",
+                                "name": "Cornstock 2025",
+                                "social_context": {
+                                    "text": "569 interested u00b7 24 going",
+                                    "ranges": []
+                                },
+                                "is_online": false,
+                                "ticketing_context_row": {
+                                    "price_range_text": null
+                                },
+                                "event_place": {
+                                    "__typename": "FreeformPlace",
+                                    "contextual_name": "Memorial Stadium",
+                                    "__isNode": "FreeformPlace",
+                                    "id": "1216797317144871"
+                                },
+                                "is_hot_event": false,
+                                "ticket_selling_status": null,
+                                "eventUrl": "https://www.facebook.com/events/1109936357990434/",
+                                "can_page_viewer_invite_as_user": false,
+                                "can_viewer_invite": true,
+                                "can_viewer_rsvp": true,
+                                "can_viewer_share": true,
+                                "event_kind": "PUBLIC_TYPE",
+                                "if_viewer_can_duplicate_event": null,
+                                "is_online_or_detected_online": false,
+                                "is_past": false,
+                                "is_viewer_host": false,
+                                "start_timestamp": 1759528800,
+                                "rsvp_button_renderer": {
+                                    "__typename": "PublicRsvpStyleRenderer",
+                                    "event": {
+                                        "id": "1109936357990434",
+                                        "connection_style": "INTERESTED",
+                                        "can_viewer_join": true,
+                                        "can_viewer_watch": true,
+                                        "can_viewer_unwatch": false,
+                                        "viewer_watch_status": "UNWATCHED",
+                                        "if_viewer_can_see_going_button": {
+                                            "__typename": "Event",
+                                            "id": "1109936357990434"
+                                        },
+                                        "event_connection_data_privacy_scope": null,
+                                        "privacy_scope_for_toast": null,
+                                        "can_join_group_chat": false,
+                                        "created_for_group": null,
+                                        "chat": null
+                                    },
+                                    "__module_operation_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"
+                                    },
+                                    "__module_component_EventCometUniversalRSVPButton_event": {
+                                        "__dr": "PublicEventCometRSVPButtonRenderer.react"
+                                    }
+                                },
+                                "parent_if_exists_or_self": {
+                                    "online_event_setup": null,
+                                    "id": "1109936357990434"
+                                },
+                                "live_virtual_event_info": null,
+                                "__typename": "Event"
+                            },
+                            "cursor": null
+                        },
+                        {
+                            "node": {
+                                "id": "4045243435714264",
+                                "schema_context": "{"u0040context":"http: //schema.org","u0040type":"Event","startDate":"2025-10-26T20:00:00-0500","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","name":"TP20: Celebrating 20 Years of T-Pain","url":"https://www.facebook.com/events/pinnacle-bank-arena/tp20-celebrating-20-years-of-t-pain/4045243435714264/","location":{"u0040type":"Place","name":"Pinnacle Bank Arena","address":{"u0040type":"PostalAddress","addressCountry":null,"addressLocality":null,"postalCode":null,"streetAddress":null}},"description":"Support acts subject to change without notice.nnSale Dates and Times:nnPublic Onsale : Fri, 6 Jun 2025 at 10:00 AMnnArtist Presale : Wed, 4 Jun 2025 at 10:00 AMnnVenue Presale : Thu, 5 Jun 2025 at 10:00 AMnnPromoter Presale : Thu, 5 Jun 2025 at 10:00 AMnnRadio Presale : Thu, 5 Jun 2025 at 10:00 AMnnSpotify Presale : Thu, 5 Jun 2025 at 12:00 PMnnAisle Seat Presale : Wed, 4 Jun 2025 at 10:00 AMnnOfficial Platinum Presale : Wed, 4 Jun 2025 at 10:00 AMnnOfficial Platinum Onsale : Fri, 6 Jun 2025 at 10:00 AMn","image":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/500978064_1142445571257332_6226191221399848011_n.jpg?stp=c0.225.1365.1365a_dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=1abd25&_nc_ohc=HMqyUSPq3FcQ7kNvwEjlPW7&_nc_oc=Adm5SzYMWz3mC-E4dJA2lTE5oj9atK64CN9xjG6zKhe4l1iIDG19HaKrd9NGsXcyrG3mhnCijFhcsZZnpHuq_7WB&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfbK9Q0Mi5NLdtlk_ed1e9sVQ-PAWzY2M9iSb-UVhMENYA&oe=68E0C5C2","performers":[]}","is_hosted_by_ticket_master":true,"cover_photo":{"photo":{"accessibility_caption":"No photo description available.","image":{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/500978064_1142445571257332_6226191221399848011_n.jpg?stp=c0.461.1365.651a_dst-jpg_s320x320_tt6&_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=HMqyUSPq3FcQ7kNvwEjlPW7&_nc_oc=Adm5SzYMWz3mC-E4dJA2lTE5oj9atK64CN9xjG6zKhe4l1iIDG19HaKrd9NGsXcyrG3mhnCijFhcsZZnpHuq_7WB&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_Afb_h1CSsqueS1HMKCRF71NXAHoiEHhAY8eHmnf8lfUK3Q&oe=68E0C5C2"},"id":"1142445567923999"}},"cover_video":null,"gif_cover_photo":null,"online_event_setup":null,"is_happening_now":false,"day_time_sentence":"Sun, Oct 26 at 8u202fPM","name":"TP20: Celebrating 20 Years of T-Pain","social_context":{"text":"5.1K interested u00b7 447 going","ranges":[]},"is_online":false,"ticketing_context_row":{"price_range_text":null},"event_place":{"__typename":"FreeformPlace","contextual_name":"Pinnacle Bank Arena","__isNode":"FreeformPlace","id":"1124571589713325"},"is_hot_event":false,"ticket_selling_status":"TICKETS_AVAILABLE","eventUrl":"https://www.facebook.com/events/4045243435714264/","can_page_viewer_invite_as_user":false,"can_viewer_invite":true,"can_viewer_rsvp":true,"can_viewer_share":true,"event_kind":"PUBLIC_TYPE","if_viewer_can_duplicate_event":null,"is_online_or_detected_online":false,"is_past":false,"is_viewer_host":false,"start_timestamp":1761526800,"rsvp_button_renderer":{"__typename":"PublicRsvpStyleRenderer","event":{"id":"4045243435714264","connection_style":"INTERESTED","can_viewer_join":true,"can_viewer_watch":true,"can_viewer_unwatch":false,"viewer_watch_status":"UNWATCHED","if_viewer_can_see_going_button":{"__typename":"Event","id":"4045243435714264"},"event_connection_data_privacy_scope":null,"privacy_scope_for_toast":null,"can_join_group_chat":false,"created_for_group":null,"chat":null},"__module_operation_EventCometUniversalRSVPButton_event":{"__dr":"PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"},"__module_component_EventCometUniversalRSVPButton_event":{"__dr":"PublicEventCometRSVPButtonRenderer.react"}},"parent_if_exists_or_self":{"online_event_setup":null,"id":"4045243435714264"},"live_virtual_event_info":null,"__typename":"Event"},"cursor":null},{"node":{"id":"556405067404326","schema_context":null,"is_hosted_by_ticket_master":false,"cover_photo":{"photo":{"accessibility_caption":"No photo description available.","image":{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/514367863_1159583682882574_2386520866445349101_n.jpg?stp=c0.54.1920.916a_dst-jpg_s320x320_tt6&_nc_cat=111&ccb=1-7&_nc_sid=75d36f&_nc_ohc=sNSc7lClSBAQ7kNvwGfQijw&_nc_oc=AdkK1MtpmQ_0QZnT6NZGd5A_whftmpIQ6mJjvsGXS5GEus8-HwWIUh9FF8XO067n5FmneH6Ry3kwcCJtgfYyLMtd&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfY5_NQhpYKxi2P-hOd46gPGsGF1spUL3mhCvchBp75rIQ&oe=68E0CC78"},"id":"1159583679549241"}},"cover_video":null,"gif_cover_photo":null,"online_event_setup":null,"is_happening_now":false,"day_time_sentence":"Thu, Oct 9 at 6u202fPM","name":"Primer 55 - Introduction To Mayhem 25th Anniversary w/ Till Hell, Evil Shadows and Sugar Cones","social_context":{"text":"113 interested u00b7 29 going","ranges":[]},"is_online":false,"ticketing_context_row":{"price_range_text":null},"event_place":{"__typename":"FreeformPlace","contextual_name":"1415 O Street, Lincoln, NE, United States, Nebraska 68508","__isNode":"FreeformPlace","id":"1179632707544338"},"is_hot_event":false,"ticket_selling_status":null,"eventUrl":"https://www.facebook.com/events/556405067404326/","can_page_viewer_invite_as_user":false,"can_viewer_invite":true,"can_viewer_rsvp":true,"can_viewer_share":true,"event_kind":"PUBLIC_TYPE","if_viewer_can_duplicate_event":null,"is_online_or_detected_online":false,"is_past":false,"is_viewer_host":false,"start_timestamp":1760050800,"rsvp_button_renderer":{"__typename":"PublicRsvpStyleRenderer","event":{"id":"556405067404326","connection_style":"INTERESTED","can_viewer_join":true,"can_viewer_watch":true,"can_viewer_unwatch":false,"viewer_watch_status":"UNWATCHED","if_viewer_can_see_going_button":{"__typename":"Event","id":"556405067404326"},"event_connection_data_privacy_scope":null,"privacy_scope_for_toast":null,"can_join_group_chat":false,"created_for_group":null,"chat":null},"__module_operation_EventCometUniversalRSVPButton_event":{"__dr":"PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"},"__module_component_EventCometUniversalRSVPButton_event":{"__dr":"PublicEventCometRSVPButtonRenderer.react"}},"parent_if_exists_or_self":{"online_event_setup":null,"id":"556405067404326"},"live_virtual_event_info":null,"__typename":"Event"},"cursor":null},{"node":{"id":"1316663602961078","schema_context":null,"is_hosted_by_ticket_master":false,"cover_photo":{"photo":{"accessibility_caption":"No photo description available.","image":{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/488884596_1065474305613853_2039661096382367681_n.jpg?stp=c0.10.1332.636a_cp6_dst-jpg_s320x320_tt6&_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=iI2vzV2ypR8Q7kNvwFWPI_1&_nc_oc=AdmDBDHAEX4ZAQzPdZ55RpgSEzCFDAmBGoMX98koDx8BXTmmLHVX4U40G0h6Wb65P8AqhI7nKfRxNSD-HOymSRVc&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfZNCwwdhw-cWME93DAzvsyG4TfUPGFD-Av7S5ML1Qf3Wg&oe=68E0D1AA"},"id":"1040797244748226"}},"cover_video":null,"gif_cover_photo":null,"online_event_setup":null,"is_happening_now":false,"day_time_sentence":"This Sunday at 4u202fPM","name":"Harvest Moon Festival 2025","social_context":{"text":"3.1K interested u00b7 122 going","ranges":[]},"is_online":false,"ticketing_context_row":{"price_range_text":null},"event_place":{"__typename":"FreeformPlace","contextual_name":"144 N 44th Street, Ste A, Lincoln, NE, United States, Nebraska 68503","__isNode":"FreeformPlace","id":"1067867342041216"},"is_hot_event":false,"ticket_selling_status":null,"eventUrl":"https://www.facebook.com/events/1316663602961078/","can_page_viewer_invite_as_user":false,"can_viewer_invite":true,"can_viewer_rsvp":true,"can_viewer_share":true,"event_kind":"PUBLIC_TYPE","if_viewer_can_duplicate_event":null,"is_online_or_detected_online":false,"is_past":false,"is_viewer_host":false,"start_timestamp":1759698000,"rsvp_button_renderer":{"__typename":"PublicRsvpStyleRenderer","event":{"id":"1316663602961078","connection_style":"INTERESTED","can_viewer_join":true,"can_viewer_watch":true,"can_viewer_unwatch":false,"viewer_watch_status":"UNWATCHED","if_viewer_can_see_going_button":{"__typename":"Event","id":"1316663602961078"},"event_connection_data_privacy_scope":null,"privacy_scope_for_toast":null,"can_join_group_chat":false,"created_for_group":null,"chat":null},"__module_operation_EventCometUniversalRSVPButton_event":{"__dr":"PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"},"__module_component_EventCometUniversalRSVPButton_event":{"__dr":"PublicEventCometRSVPButtonRenderer.react"}},"parent_if_exists_or_self":{"online_event_setup":null,"id":"1316663602961078"},"live_virtual_event_info":null,"__typename":"Event"},"cursor":null}],"page_info":{"end_cursor":"eyJzdGFydF90aW1lIjoxNzU5MTc5NTU2LCJlbmRfdGltZSI6MTc2Njk1NTU1NiwiYnJvd3NlX2N1cnNvciI6IkFicjFlZmRZbUEteU1WYmh2RFNwRjF0MXV0amp2N2pKWm4tcDhQck9ZU1RWT0tKTEN1c0ZuNTJFX00xVUEyeTZmNUJIVlJmQmpCVk5fZTNxelNoTm9xX1FRVnBFMmFwUmR3aGo1eVZIMG1OLVNVOGdPQ011YllOVnVSSUxCMmJZN1hERVQ0QWJDSDBRdkg4aE9iMVlLd2xDZXREZTBQTHR5OFhJM0xCRmYwa1ZhSXJ5OXJIcFBmMi1iX1cyR054TDY1eTRBa3B1N254aXZkWW8xXy1WTXQwNkdpU2ZQdzZVSUMzUHhzLXlObUhMdTA5TnlBTkdaSkoyb2ZkZUNtTm9tbC1XZC10Z1JaTVNLZFdPVVVtU2xhdHhwS3J2NXRBNDZIZW1kSEYxeGs2dlo3azB0YU5CMG8wQ3hZX1J5aWE5d0M5djEybkhrMWNVMHNKV2lzTEFGZ25qdnRVcDBBX2JzYXNxM1YzdDZxVjN1WVEtcTVzNnA4TE1DMXZVb3Bma09id2JWdllTWnhUUE9XU3JPOFhjNF9YdF9Xc1JjaXhRaHlHQnhuQ29uVFdiOUNfZTdxUlcxMi1ZMGQ4aHZ0c2hxWThWcHJsSDNVNWRKOWQxYVlEVnEzWlcxWUt2eTE1TzBmTDFWbmRTMDlSTG1ZSGhTZUlGTFdZb0QxRUlEWUZhMUVhOWxveEUwWWJsYmlKRElsSHFROUxKWS0yOFRkN3h0QVlPQTZFMlRWc0ZuZyJ9","has_next_page":true}}}},"page":{"name":"Lincoln, Nebraska","best_description":{"delight_ranges":[],"image_ranges":[],"inline_style_ranges":[],"aggregated_ranges":[],"ranges":[],"color_ranges":[],"text":"Lincoln is the capital of the U.S. state of Nebraska and the county seat of Lancaster County. The city covers 93.46sqmi with a population of 280,364 in 2016. It is the second-most populous city in Nebraska and the 71st-largest in the United States. The city is the economic and cultural anchor of a substantially larger metropolitan area in the southeastern part of the state called the Lincoln Metropolitan and Lincoln-Beatrice Combined Statistical Areas. The statistical area is home to 348,720 people, making it the 105th-largest combined statistical area in the United States.The city was founded in 1856 as the village of Lancaster on the wild salt marshes of what was to become Lancaster County. In 1867, the village of Lancaster became Nebraska's state capital and was renamed Lincoln. The Bertram G. Goodhue designed state capitol building was completed in 1932 and is the second tallest capitol in the United States. As the city is the seat of government for the state of Nebraska, the state and the United States government are major employers. The University of Nebraska was founded in Lincoln in 1867. The university is the largest in Nebraska with 25,006 students enrolled and is the city's third-largest employer. Other primary employers fall within the service and manufacturing industries, including a growing high-tech sector. The region makes up a part of what is known as the greater Midwest Silicon Prairie."},"id":"111705815512085"}},"extensions":{"prefetch_uris_v2":[{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/549564641_1370922985040594_876540263778411604_n.jpg?stp=c0.54.1920.916a_dst-jpg_s320x320_tt6&_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=4UWsZYo9hGoQ7kNvwE9Mgp3&_nc_oc=AdmyoFttZI74R_8KeFMEg7r9hWltHMKSyEivMuyjNb8SJS07uHTtDi7EUTiGFw9d-S_atovYVEKAYjbHufIHY7NS&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfYd1fDDQfPmRn1WU0f_b9zvLhBczMkBrK0nQwHXGLIz_g&oe=68E0DDDF","label":null,"width":null,"height":null},{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/488884596_1065474305613853_2039661096382367681_n.jpg?stp=c0.10.1332.636a_cp6_dst-jpg_s320x320_tt6&_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=iI2vzV2ypR8Q7kNvwFWPI_1&_nc_oc=AdmDBDHAEX4ZAQzPdZ55RpgSEzCFDAmBGoMX98koDx8BXTmmLHVX4U40G0h6Wb65P8AqhI7nKfRxNSD-HOymSRVc&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfZNCwwdhw-cWME93DAzvsyG4TfUPGFD-Av7S5ML1Qf3Wg&oe=68E0D1AA","label":null,"width":null,"height":null},{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/514367863_1159583682882574_2386520866445349101_n.jpg?stp=c0.54.1920.916a_dst-jpg_s320x320_tt6&_nc_cat=111&ccb=1-7&_nc_sid=75d36f&_nc_ohc=sNSc7lClSBAQ7kNvwGfQijw&_nc_oc=AdkK1MtpmQ_0QZnT6NZGd5A_whftmpIQ6mJjvsGXS5GEus8-HwWIUh9FF8XO067n5FmneH6Ry3kwcCJtgfYyLMtd&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfY5_NQhpYKxi2P-hOd46gPGsGF1spUL3mhCvchBp75rIQ&oe=68E0CC78","label":null,"width":null,"height":null},{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/542758834_1195678592590077_4463130468930903673_n.jpg?stp=c0.45.1600.764a_dst-jpg_s320x320_tt6&_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=FnMVWblkkp8Q7kNvwGJ5U27&_nc_oc=AdmD_KBlHzLdvIcAaFoyDhFzewoKiiWcWq5p3SrTdoPxiBTgxD7GWv6F6tuWmaLpTC8GqtAU9NdYunOhOkFNuJ08&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_Afa5xfjcPtwHdGcScicaSBCisoVmuWNT0vpIbsnY5HZLLQ&oe=68E0C8EE","label":null,"width":null,"height":null},{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/533112556_122162687744435788_3207897998597135902_n.jpg?stp=c0.54.1920.916a_dst-jpg_s320x320_tt6&_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=cfiMwxJ5qOEQ7kNvwGvPK6R&_nc_oc=AdliYrhQ5wciDM7HTZdf_DLvWQyJ_ueELresnVecFYkJm8ADIc3I7mtCXJpcunKG3Irq8mtb8fsMM_IJByIbR3eO&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfY5gTueJFsFHOwWeLZVUBFn3mkjN8WyfvkL8hio4YwIxQ&oe=68E0AFF5","label":null,"width":null,"height":null},{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/490297036_1083891010448050_2019362763271741075_n.jpg?stp=c0.18.1200.573a_dst-jpg_s320x320_tt6&_nc_cat=102&ccb=1-7&_nc_sid=75d36f&_nc_ohc=RR9g_NMjQ5wQ7kNvwGGot5R&_nc_oc=AdkmdY-AYDxkmucGFj7B9njEwJ7AVhVN66klCkQDCs96AIk-hy5rKxW3wdQwbkVnJ8KF4xDA5SXoY9KDdI2xpsYM&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfZM8MFt9OWnTPNJJCZW7cm0vR3lYFxsxwUw7NVWu_nyCw&oe=68E0AAD2","label":null,"width":null,"height":null},{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/549859844_1371829818283244_7322212163766903259_n.jpg?stp=c0.54.1920.916a_dst-jpg_s320x320_tt6&_nc_cat=110&ccb=1-7&_nc_sid=75d36f&_nc_ohc=lnCBqvid2vgQ7kNvwGtJADE&_nc_oc=AdkIFRV9_iD52ovYliZ4by3UrxL02JJ0_57t84VxZlYzXYM3EFc0LYoKcpkF3EkH6etqo7jPVFOc5kpuFDxVlF5h&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfbqyMN1iUIhyWd4oCphCuWt5Cz5t8LAdrBoIRce3DfkUw&oe=68E0AAEC","label":null,"width":null,"height":null},{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/481157772_122191600028133881_6452560740621699703_n.jpg?stp=c0.161.1650.787a_dst-jpg_s320x320_tt6&_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=Zfs_uVNfWf0Q7kNvwF_bKhk&_nc_oc=Adklyj_AMxm5co12O_Mmd9RQaek-qYhUZJzin-kbACiLihnvds88up-uBbPfOEWjNAhQPnpTv4LZHodOJ-6N0ekj&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfbFxg53zs2V2XtaYpNRED8HGJnPNHZvYp6a9T-8WZjWaQ&oe=68E0C3EB","label":null,"width":null,"height":null},{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/540143050_122216245586133881_6792674191728741117_n.jpg?stp=c0.112.940.449a_dst-jpg_s320x320_tt6&_nc_cat=104&ccb=1-7&_nc_sid=75d36f&_nc_ohc=V5x3j0aMGssQ7kNvwHaShIw&_nc_oc=AdlBYfLn1-gL3s01a-n1Lrnh6SIMP_94-28noiqcjaYjVR-IK53d-wLsVlMgZZZY2Q4P-duOc4_fFBu9BJi3DlTR&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfZqpjB_8F2mWqCsPh-fIsShJyP3MS2Kl38p4mG8ZnEgUg&oe=68E0B8AF","label":null,"width":null,"height":null},{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/492072438_1085183146962053_4459496800882810178_n.jpg?stp=c0.47.1640.782a_dst-jpg_s320x320_tt6&_nc_cat=106&ccb=1-7&_nc_sid=75d36f&_nc_ohc=3kILhdyyTNMQ7kNvwFoWsiH&_nc_oc=AdngGdH9wH5xH_FPYnw1sS9zI38dOrGFkLORYvoS3ot77Tl6Q59hVC51XlCeuHPqHOzrcUfkbXp9rL-247NsNMIT&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfaVIL7aRxoChfF1hBCWfNbiyD9L4RRs8pt5EDs4GlUzYg&oe=68E0B881","label":null,"width":null,"height":null},{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/552825494_1208462424634124_6433086290702326790_n.jpg?stp=c0.54.1920.916a_dst-jpg_s320x320_tt6&_nc_cat=108&ccb=1-7&_nc_sid=75d36f&_nc_ohc=oXlv6TLDlR0Q7kNvwE8JPyt&_nc_oc=AdmcUoOc6-e7hPEuHlfvmgCqhvLT691AhpIxNe-rjPA161IU6r8AacwplzG8D9ufL4KwQ8Awtf_yNn94-eEARVwj&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_AfY8dbNsSyFlTUCTaN7YDkox4nkvX3Vu54aJCbbrvftnEQ&oe=68E0BDD2","label":null,"width":null,"height":null},{"uri":"https://scontent-den2-1.xx.fbcdn.net/v/t39.30808-6/500978064_1142445571257332_6226191221399848011_n.jpg?stp=c0.461.1365.651a_dst-jpg_s320x320_tt6&_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=HMqyUSPq3FcQ7kNvwEjlPW7&_nc_oc=Adm5SzYMWz3mC-E4dJA2lTE5oj9atK64CN9xjG6zKhe4l1iIDG19HaKrd9NGsXcyrG3mhnCijFhcsZZnpHuq_7WB&_nc_zt=23&_nc_ht=scontent-den2-1.xx&_nc_gid=OGAiI2mwBHvMmyU-MUD3FQ&oh=00_Afb_h1CSsqueS1HMKCRF71NXAHoiEHhAY8eHmnf8lfUK3Q&oe=68E0C5C2","label":null,"width":null,"height":null}],"server_metadata":{"request_start_time_ms":1759179556894,"time_at_flush_ms":1759179557466},"is_final":true,"sr_payload":{"ddd":{"hsrp":{"hblp":{"consistency":{"rev":1027734841},"rsrcMap":{"csr:_2f_0_Y+":{"type":"csr","src":":1,826,86,6,100,9,14,20,16,3,109,87,10,17,8,2,28,11,7,296,4,5,93,388,643,69,238,932","c":1}},"indexUpgrades":{}}},"jsmods":{"require":[["PublicEventCometRSVPButtonRenderer.react"],["PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"],["emptyFunction","thatReturns",["RequireDeferredReference"],[[{"__dr":"PublicEventCometRSVPButtonRenderer.react"},{"__dr":"PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"}]]],["RequireDeferredReference","unblock",[],[["PublicEventCometRSVPButtonRenderer.react","PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"],"sd"]],["RequireDeferredReference","unblock",[],[["PublicEventCometRSVPButtonRenderer.react","PublicEventCometRSVPButtonRenderer_rsvpStyleRenderer$normalization.graphql"],"css"]]]},"allResources":["csr:_2f_0_Y+"],"tieredResources":{"r":["csr:_2f_0_Y+"],"rdfds":[],"rds":[]}}}}}
