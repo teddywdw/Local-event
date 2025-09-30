@@ -1,6 +1,7 @@
 import json
 from haralyzer import HarParser
 
+
 def find_event_names(obj, found_events):
     """
     Recursively search for event 'name' fields in any dict/list structure.
@@ -8,13 +9,7 @@ def find_event_names(obj, found_events):
     """
     if isinstance(obj, dict):
         # Heuristic: looks like an event node if it has 'name' and 'eventUrl' or '__typename' == 'Event'
-        if (
-            "name" in obj
-            and (
-                "eventUrl" in obj
-                or obj.get("__typename") == "Event"
-            )
-        ):
+        if "name" in obj and ("eventUrl" in obj or obj.get("__typename") == "Event"):
             found_events.append(obj["name"])
         # Continue searching all values
         for v in obj.values():
@@ -23,20 +18,19 @@ def find_event_names(obj, found_events):
         for item in obj:
             find_event_names(item, found_events)
 
+
 def parse_facebook_har(har_file_path):
     """
     Parses a HAR file to extract all event names from Facebook GraphQL API calls.
     """
     try:
-        print(f"The file '{har_file_path}' was found.")
-        with open(har_file_path, 'r', encoding='utf-8') as f:
+        with open(har_file_path, "r", encoding="utf-8") as f:
             har_data = json.loads(f.read())
     except FileNotFoundError:
-        print(f"Error: The file '{har_file_path}' was not found.")
-        return
+        # return empty list on missing file so callers can handle it
+        return []
     except json.JSONDecodeError:
-        print(f"Error: The file '{har_file_path}' is not a valid JSON file.")
-        return
+        return []
 
     parser = HarParser(har_data)
 
@@ -50,13 +44,13 @@ def parse_facebook_har(har_file_path):
 
     # Filter entries to find the GraphQL requests
     graphql_entries = [
-        entry for entry in all_entries
-        if "api/graphql/" in entry.request.url and entry.request.method == 'POST'
+        entry
+        for entry in all_entries
+        if "api/graphql/" in entry.request.url and entry.request.method == "POST"
     ]
 
     if not graphql_entries:
-        print("No GraphQL API requests found in the HAR file.")
-        return
+        return []
 
     all_event_names = []
 
@@ -71,7 +65,7 @@ def parse_facebook_har(har_file_path):
                     # Sometimes the response is multiple JSON objects concatenated
                     # Try to split and parse each
                     response_json = []
-                    for part in response_text.split('\n'):
+                    for part in response_text.split("\n"):
                         part = part.strip()
                         if part:
                             try:
@@ -82,12 +76,15 @@ def parse_facebook_har(har_file_path):
             except Exception:
                 continue
 
-    if all_event_names:
-        print("All events found in the HAR file:")
-        for name in sorted(set(all_event_names)):
-            print(f" - {name}")
-    else:
-        print("No events found in the HAR file.")
+    # return unique event names
+    return sorted(set(all_event_names))
 
-# Run the parser on your HAR file
-parse_facebook_har('src/Example2.har')
+
+if __name__ == "__main__":
+    events = parse_facebook_har("src/Example2.har")
+    if not events:
+        print("No events found or no GraphQL API requests found in the HAR file.")
+    else:
+        print("All events found in the HAR file:")
+        for name in events:
+            print(f" - {name}")
