@@ -1,0 +1,9 @@
+# Normalize text files and ensure consistent eol handling
+* text=auto
+
+# Force LF for these text files in the repo
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*** End Patch
