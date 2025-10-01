@@ -23,21 +23,38 @@ def find_event_names(obj, found_events):
 
 
 def central_time_from_timestamp(ts: int) -> str:
-    """Convert epoch seconds (UTC) to America/Chicago local time, formatted.
+    """Convert epoch seconds (UTC) to America/Chicago local date-time string.
 
-    Example format: 'Saturday at 9 PM' (no date), matching the user's example.
+    Output example: '2025-10-04 9:00 PM CDT'
+    - Uses America/Chicago and includes DST-aware timezone abbreviation.
+    - Returns empty string on failure.
     """
     try:
-        dt_utc = datetime.fromtimestamp(int(ts), tz=timezone.utc)
-        dt_ct = dt_utc.astimezone(ZoneInfo("America/Chicago"))
-        return dt_ct.strftime("%A at %I %p").lstrip("0").replace(" 0", " ")
+        raw = int(ts)
+        # Normalize milliseconds to seconds if needed
+        if raw > 10**12:
+            raw //= 1000
+        dt_utc = datetime.fromtimestamp(raw, tz=timezone.utc)
+        # Try to use America/Chicago; fallback to UTC if tz database not available
+        try:
+            tz_central = ZoneInfo("America/Chicago")
+        except Exception:
+            tz_central = None
+        dt_local = dt_utc.astimezone(tz_central) if tz_central else dt_utc
+        date_part = dt_local.strftime("%Y-%m-%d")
+        time_part = dt_local.strftime("%I:%M %p").lstrip("0")
+        tz_part = dt_local.tzname() or ("CT" if tz_central else "UTC")
+        return f"{date_part} {time_part} {tz_part}"
     except Exception:
         return ""
 
 
 def print_event_info(event: dict) -> None:
     name = event.get("name", "")
-    dt = central_time_from_timestamp(event.get("start_timestamp", 0))
+    ts = event.get("start_timestamp")
+    if ts is None:
+        ts = find_first_key(event, "start_timestamp")
+    dt = central_time_from_timestamp(ts or 0)
     location = event.get("event_place", {}).get("contextual_name", "")
     # Best-effort for host. Often not present in this payload; fall back to location or blank
     event_by = (
@@ -54,16 +71,39 @@ def print_event_info(event: dict) -> None:
 def iter_event_nodes(obj):
     """Yield event-like dicts from an arbitrary nested structure.
 
-    Heuristic: dicts with __typename == 'Event' or both 'name' and 'eventUrl'.
+    Heuristic: dicts with __typename == 'Event' or both 'name' and 'eventUrl',
+    or 'name' and 'start_timestamp' (some payloads omit eventUrl at this level).
     """
     if isinstance(obj, dict):
-        if obj.get("__typename") == "Event" or ("name" in obj and "eventUrl" in obj):
+        looks_like_event = (
+            obj.get("__typename") == "Event"
+            or ("name" in obj and "eventUrl" in obj)
+            or ("name" in obj and "start_timestamp" in obj)
+        )
+        if looks_like_event:
             yield obj
         for v in obj.values():
             yield from iter_event_nodes(v)
     elif isinstance(obj, list):
         for item in obj:
             yield from iter_event_nodes(item)
+
+
+def find_first_key(obj, key):
+    """Recursively find the first non-null occurrence of a key in a nested structure."""
+    if isinstance(obj, dict):
+        if key in obj and obj[key] is not None:
+            return obj[key]
+        for v in obj.values():
+            found = find_first_key(v, key)
+            if found is not None:
+                return found
+    elif isinstance(obj, list):
+        for item in obj:
+            found = find_first_key(item, key)
+            if found is not None:
+                return found
+    return None
 
 
 def main(debug: bool = False, har_path: str = "src/Example2.har"):
