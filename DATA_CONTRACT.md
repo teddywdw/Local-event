@@ -8,21 +8,22 @@ This document defines the data contract between the HAR parser (`Local-event`) a
 ### Command Line Interface
 ```powershell
 # Text output (default - for human reading)
-python src/har_parser.py --har src/Example2.har --format text
+python src/parser/har_parser.py --har src/parser/Example2.har --format text
 
 # JSON output (for programmatic consumption)
-python src/har_parser.py --har src/Example2.har --format json
+python src/parser/har_parser.py --har src/parser/Example2.har --format json
 
 # Debug mode (shows processing details)
-python src/har_parser.py --har src/Example2.har --format json --debug
+python src/parser/har_parser.py --har src/parser/Example2.har --format json --debug
 ```
 
 ### Programmatic Usage (Python Module)
 ```python
 # Import and use as a module
-from src.har_parser import main
+from src.parser import main
 
 # Get structured data
+events = main(debug=False, har_path="src/parser/Example2.har", output_format="json")
 events = main(debug=False, har_path="src/Example2.har", output_format="json")
 # Returns: List[Dict] with event objects
 ```
@@ -64,9 +65,10 @@ import json
 def get_events_from_har(har_file_path):
     """Extract events using the CLI tool"""
     result = subprocess.run([
-        'python', 'path/to/Local-event/src/har_parser.py',
+        'python', 'path/to/Local-event/src/parser/har_parser.py',
         '--har', har_file_path,
         '--format', 'json'
+    ], capture_output=True, text=True, cwd='path/to/Local-event')
     ], capture_output=True, text=True, cwd='path/to/Local-event')
 
     if result.returncode == 0:
@@ -79,9 +81,11 @@ def get_events_from_har(har_file_path):
 ```python
 import sys
 sys.path.append('path/to/Local-event/src')
-from har_parser import main
+from parser import main
 
 def get_events_from_har(har_file_path):
+    """Extract events using direct module import"""
+    return main(debug=False, har_path=har_file_path, output_format="json")
     """Extract events using direct module import"""
     return main(debug=False, har_path=har_file_path, output_format="json")
 ```

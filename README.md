@@ -1,18 +1,24 @@
 # Local-event
 
 ## Overview
-This small script-based project parses browser HAR files and extracts (Facebook) GraphQL event names. The parser is in `src/har_parser.py` and example HAR files live in `src/`.
+This project provides tools for parsing browser HAR files and extracting Facebook GraphQL event data. The parser module is located in `src/parser/` and a web interface will be available in `src/web/`.
 
 ## Project structure
 ```
 Local-event
-├── src
-│   ├── har_parser.py
-│   ├── main.py
-│   └── Example2.har
-├── tests
+├── src/
+│   ├── parser/           # HAR parsing utility module
+│   │   ├── har_parser.py # Main parser logic
+│   │   ├── Example2.har  # Sample HAR file
+│   │   └── __init__.py   # Module interface
+│   ├── web/              # Web interface (planned)
+│   │   └── __init__.py
+│   ├── main.py           # Simple entry point
+│   └── __init__.py
+├── tests/
 │   └── test_main.py
 ├── requirements.txt
+├── DATA_CONTRACT.md      # JSON output schema
 └── README.md
 ```
 
@@ -43,9 +49,28 @@ python -m pip install -r requirements.txt
 ```
 
 ### Run the parser
-The parser prints found event names for `src/Example2.har` by default (see bottom of `src/har_parser.py`):
+The parser extracts events from HAR files with both text and JSON output formats:
 ```powershell
-python src/har_parser.py
+# Text output (human-readable, default)
+python src/parser/har_parser.py --format text
+
+# JSON output (for programmatic use)
+python src/parser/har_parser.py --format json
+
+# Specify a different HAR file
+python src/parser/har_parser.py --har path/to/your/file.har --format json
+
+# Debug mode for troubleshooting
+python src/parser/har_parser.py --debug --format text
+```
+
+### Use as a Python module
+```python
+# Import the parser module
+from src.parser import main, extract_event_info
+
+# Get structured event data
+events = main(debug=False, har_path="src/parser/Example2.har", output_format="json")
 ```
 
 ### Run tests

@@ -120,7 +120,9 @@ def find_first_key(obj, key):
 
 
 def main(
-    debug: bool = False, har_path: str = "src/Example2.har", output_format: str = "text"
+    debug: bool = False,
+    har_path: str = "src/parser/Example2.har",
+    output_format: str = "text",
 ):
     print("[har_parser] Starting...", flush=True)
     print(f"[har_parser] Using HAR: {har_path}", flush=True)
@@ -233,8 +235,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--har",
         dest="har_path",
-        default="src/Example2.har",
-        help="Path to HAR file (default: src/Example2.har)",
+        default="src/parser/Example2.har",
+        help="Path to HAR file (default: src/parser/Example2.har)",
     )
     parser.add_argument("--debug", action="store_true", help="Enable debug output")
     parser.add_argument(
