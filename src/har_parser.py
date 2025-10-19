@@ -49,23 +49,36 @@ def central_time_from_timestamp(ts: int) -> str:
         return ""
 
 
-def print_event_info(event: dict) -> None:
+def extract_event_info(event: dict) -> dict:
+    """Extract event information into a structured dictionary."""
     name = event.get("name", "")
     ts = event.get("start_timestamp")
     if ts is None:
         ts = find_first_key(event, "start_timestamp")
     dt = central_time_from_timestamp(ts or 0)
     location = event.get("event_place", {}).get("contextual_name", "")
-    # Best-effort for host. Often not present in this payload; fall back to location or blank
-    event_by = (
-        event.get("event_host", "") or event.get("owner", {}).get("name", "") or ""
-    )
     details = (
         event.get("cover_photo", {}).get("photo", {}).get("accessibility_caption", "")
     )
     link = event.get("eventUrl", "")
     event_id = event.get("id", "")
-    print(f'{name}\n{dt}\n{location}\n{event_by}\n"{details}"\n{link}\n{event_id}\n')
+
+    return {
+        "name": name,
+        "datetime": dt,
+        "location": location,
+        "details": details,
+        "link": link,
+        "event_id": event_id,
+    }
+
+
+def print_event_info(event: dict) -> None:
+    """Print event information in the original text format."""
+    info = extract_event_info(event)
+    print(
+        f'{info["name"]}\n{info["datetime"]}\n{info["location"]}\n"{info["details"]}"\n{info["link"]}\n{info["event_id"]}\n'
+    )
 
 
 def iter_event_nodes(obj):
@@ -106,30 +119,37 @@ def find_first_key(obj, key):
     return None
 
 
-def main(debug: bool = False, har_path: str = "src/Example2.har"):
+def main(
+    debug: bool = False, har_path: str = "src/Example2.har", output_format: str = "text"
+):
     print("[har_parser] Starting...", flush=True)
     print(f"[har_parser] Using HAR: {har_path}", flush=True)
     hp = Path(har_path)
     if not hp.exists():
         print(f"[har_parser] ERROR: HAR file not found at {hp.resolve()}", flush=True)
-        return
+        return None
     print("Hello")
     try:
         with open(har_path, "r", encoding="utf-8") as f:
             har = json.load(f)
     except Exception as e:
         print(f"Error loading HAR file '{har_path}': {e}")
-        return
+        return None
 
-    # Basic structure info
-    print("HAR file loaded successfully.", flush=True)
-    print(f"Top-level HAR keys: {list(har.keys())}", flush=True)
+    # Basic structure info (only show in text mode or debug)
+    if output_format == "text" or debug:
+        print("HAR file loaded successfully.", flush=True)
+        print(f"Top-level HAR keys: {list(har.keys())}", flush=True)
     log = har.get("log", {})
-    print(f"Log keys: {list(log.keys())}", flush=True)
+    if output_format == "text" or debug:
+        print(f"Log keys: {list(log.keys())}", flush=True)
     entries = log.get("entries", [])
-    print(f"Number of entries: {len(entries)}", flush=True)
+    if output_format == "text" or debug:
+        print(f"Number of entries: {len(entries)}", flush=True)
     if debug:
         print(f"Loaded HAR file with {len(entries)} entries.", flush=True)
+
+    all_events = []  # Collect all events for JSON output
 
     for idx, entry in enumerate(entries):
         if debug:
@@ -176,7 +196,10 @@ def main(debug: bool = False, har_path: str = "src/Example2.har"):
                 )
             for edge in edges:
                 event = edge.get("node", {})
-                print_event_info(event)
+                if output_format == "json":
+                    all_events.append(extract_event_info(event))
+                else:
+                    print_event_info(event)
                 events_printed += 1
         else:
             if debug:
@@ -185,11 +208,20 @@ def main(debug: bool = False, har_path: str = "src/Example2.har"):
                     flush=True,
                 )
             for node in iter_event_nodes(data):
-                print_event_info(node)
+                if output_format == "json":
+                    all_events.append(extract_event_info(node))
+                else:
+                    print_event_info(node)
                 events_printed += 1
         if debug:
             print(f"Entry {idx} printed {events_printed} events.", flush=True)
-    print("[har_parser] Done.", flush=True)
+
+    if output_format == "json":
+        print(json.dumps(all_events, indent=2))
+        return all_events
+    else:
+        print("[har_parser] Done.", flush=True)
+        return all_events
 
 
 if __name__ == "__main__":
@@ -205,8 +237,15 @@ if __name__ == "__main__":
         help="Path to HAR file (default: src/Example2.har)",
     )
     parser.add_argument("--debug", action="store_true", help="Enable debug output")
+    parser.add_argument(
+        "--format",
+        dest="output_format",
+        choices=["text", "json"],
+        default="text",
+        help="Output format: text (default) or json",
+    )
     args = parser.parse_args()
 
     # Make sure output is unbuffered; prints above already flush, but keep consistent
     sys.stdout.flush()
-    main(debug=args.debug, har_path=args.har_path)
+    main(debug=args.debug, har_path=args.har_path, output_format=args.output_format)
