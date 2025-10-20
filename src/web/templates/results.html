@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block title %}Parse Results - HAR Event Parser{% endblock %}
+
+{% block extra_css %}
+<style>
+    .events-grid {
+        display: grid;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .event-card {
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .event-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .event-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.8rem;
+    }
+
+    .event-meta {
+        display: grid;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .meta-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .meta-label {
+        font-weight: 500;
+        color: #666;
+        min-width: 80px;
+    }
+
+    .meta-value {
+        color: #333;
+        flex: 1;
+    }
+
+    .event-link {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 8px 16px;
+        background: linear-gradient(135deg, #1877f2 0%, #42a5f5 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        transition: transform 0.2s;
+    }
+
+    .event-link:hover {
+        transform: translateY(-1px);
+        color: white;
+    }
+
+    .stats-bar {
+        background: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #667eea;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 0.25rem;
+    }
+
+    .export-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+
+    .debug-info {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 6px;
+        padding: 1rem;
+        margin-top: 2rem;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9rem;
+        overflow-x: auto;
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 3rem 2rem;
+        color: #666;
+    }
+
+    .empty-state h3 {
+        margin-bottom: 1rem;
+        color: #999;
+    }
+
+    @media (max-width: 768px) {
+        .stats-bar {
+            text-align: center;
+        }
+
+        .export-actions {
+            justify-content: center;
+        }
+
+        .meta-item {
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .meta-label {
+            min-width: auto;
+            font-size: 0.9rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Parse Results</h2>
+
+    {% if result.success %}
+    <div class="stats-bar">
+        <div class="stat-item">
+            <div class="stat-number">{{ result.event_count }}</div>
+            <div class="stat-label">Events Found</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">{{ result.parse_time_ms }}ms</div>
+            <div class="stat-label">Parse Time</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">{{ result.service_used }}</div>
+            <div class="stat-label">Service Type</div>
+        </div>
+    </div>
+
+    <div class="export-actions">
+        <a href="{{ url_for('download_json') }}" class="btn">📄 Download JSON</a>
+        <a href="{{ url_for('download_csv') }}" class="btn btn-secondary">📊 Download CSV</a>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">🔄 Parse Another File</a>
+    </div>
+
+    {% if result.events %}
+    <div class="events-grid">
+        {% for event in result.events %}
+        <div class="event-card">
+            <div class="event-title">{{ event.name }}</div>
+            <div class="event-meta">
+                <div class="meta-item">
+                    <span class="meta-label">📅 When:</span>
+                    <span class="meta-value">{{ event.datetime }}</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">📍 Where:</span>
+                    <span class="meta-value">{{ event.location or 'Location not specified' }}</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">🔗 ID:</span>
+                    <span class="meta-value">{{ event.event_id }}</span>
+                </div>
+                {% if event.details and event.details != 'No photo description available.' %}
+                <div class="meta-item">
+                    <span class="meta-label">ℹ️ Details:</span>
+                    <span class="meta-value">{{ event.details[:200] }}{% if event.details|length > 200 %}...{% endif
+                        %}</span>
+                </div>
+                {% endif %}
+            </div>
+            <a href="{{ event.link }}" target="_blank" class="event-link">View on Facebook →</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <h3>No Events Found</h3>
+        <p>The HAR file was processed successfully, but no Facebook events were detected. Try capturing network traffic
+            while browsing Facebook events pages.</p>
+    </div>
+    {% endif %}
+
+    {% if debug_info %}
+    <details>
+        <summary><strong>Debug Information</strong> (click to expand)</summary>
+        <div class="debug-info">{{ debug_info }}</div>
+    </details>
+    {% endif %}
+
+    {% else %}
+    <div class="alert alert-error">
+        <h3>Parse Failed</h3>
+        <p><strong>Error:</strong> {{ result.error_message }}</p>
+        {% if result.debug_info %}
+        <details>
+            <summary>Debug Information</summary>
+            <div class="debug-info">{{ result.debug_info }}</div>
+        </details>
+        {% endif %}
+    </div>
+
+    <div style="margin-top: 2rem;">
+        <a href="{{ url_for('index') }}" class="btn">🔄 Try Again</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

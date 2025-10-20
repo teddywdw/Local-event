@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card">
+    <h2>Upload HAR File</h2>
+    <p>Upload a browser HAR (HTTP Archive) file to extract Facebook events. HAR files can be exported from your
+        browser's developer tools.</p>
+
+    <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload_har') }}">
+        <div class="form-group">
+            <label for="har_file">Select HAR File:</label>
+            <input type="file" id="har_file" name="har_file" accept=".har" required>
+            <div class="file-info">
+                <strong>Supported formats:</strong> .har files (JSON format)<br>
+                <strong>Max file size:</strong> 16MB
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="debug" value="1"> Enable debug mode (show detailed parsing information)
+            </label>
+        </div>
+
+        <button type="submit" class="btn">Parse Events</button>
+        <a href="{{ url_for('api_events') }}" class="btn btn-secondary">View API Documentation</a>
+    </form>
+
+    <div class="loading">
+        <div class="spinner"></div>
+        <p>Processing HAR file... This may take a few moments.</p>
+    </div>
+</div>
+
+<div class="card">
+    <h3>How to Export HAR Files</h3>
+    <ol>
+        <li><strong>Chrome/Edge:</strong> Open Developer Tools (F12) → Network tab → Navigate to Facebook → Right-click
+            → "Save all as HAR with content"</li>
+        <li><strong>Firefox:</strong> Open Developer Tools (F12) → Network tab → Navigate to Facebook → Right-click →
+            "Save All As HAR"</li>
+        <li><strong>Safari:</strong> Develop menu → Show Web Inspector → Network tab → Navigate to Facebook → Export →
+            "Export HAR"</li>
+    </ol>
+    <p><strong>Note:</strong> Make sure to capture network traffic while browsing Facebook events pages for best
+        results.</p>
+</div>
+
+<div class="card">
+    <h3>Example Usage</h3>
+    <p>Try the parser with sample data:</p>
+    <form method="POST" action="{{ url_for('parse_example') }}">
+        <button type="submit" class="btn">Parse Example HAR File</button>
+    </form>
+</div>
+{% endblock %}

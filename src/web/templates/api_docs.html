@@ -1,0 +1,426 @@
+{% extends "base.html" %}
+
+{% block title %}API Documentation - HAR Event Parser{% endblock %}
+
+{% block extra_css %}
+<style>
+    .api-section {
+        margin-bottom: 2rem;
+    }
+
+    .api-endpoint {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 6px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .method-badge {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: white;
+        margin-right: 0.5rem;
+    }
+
+    .method-get {
+        background: #28a745;
+    }
+
+    .method-post {
+        background: #007bff;
+    }
+
+    .method-put {
+        background: #ffc107;
+        color: #212529;
+    }
+
+    .method-delete {
+        background: #dc3545;
+    }
+
+    .endpoint-url {
+        font-family: 'Courier New', monospace;
+        background: #fff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        margin: 0.5rem 0;
+    }
+
+    .code-block {
+        background: #2d3748;
+        color: #e2e8f0;
+        padding: 1rem;
+        border-radius: 6px;
+        overflow-x: auto;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9rem;
+        margin: 1rem 0;
+    }
+
+    .response-example {
+        background: #f1f5f9;
+        border: 1px solid #cbd5e0;
+        border-radius: 6px;
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    .parameter-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+    }
+
+    .parameter-table th,
+    .parameter-table td {
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        text-align: left;
+    }
+
+    .parameter-table th {
+        background: #f8f9fa;
+        font-weight: 600;
+    }
+
+    .required {
+        color: #dc3545;
+        font-weight: 600;
+    }
+
+    .optional {
+        color: #6c757d;
+    }
+
+    .toc {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 6px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .toc ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .toc ul ul {
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .toc a {
+        color: #667eea;
+        text-decoration: none;
+        padding: 0.25rem 0;
+        display: block;
+    }
+
+    .toc a:hover {
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>API Documentation</h2>
+    <p>REST API endpoints for programmatic access to the HAR event parser service.</p>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#authentication">Authentication</a></li>
+            <li><a href="#endpoints">Endpoints</a>
+                <ul>
+                    <li><a href="#post-parse">POST /api/events/parse</a></li>
+                    <li><a href="#get-health">GET /api/health</a></li>
+                    <li><a href="#get-info">GET /api/info</a></li>
+                </ul>
+            </li>
+            <li><a href="#data-format">Data Format</a></li>
+            <li><a href="#error-handling">Error Handling</a></li>
+            <li><a href="#examples">Examples</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="card" id="overview">
+    <h3>Overview</h3>
+    <p>The HAR Event Parser API provides endpoints to extract Facebook events from HAR (HTTP Archive) files. All
+        endpoints return JSON responses and follow REST conventions.</p>
+
+    <table class="parameter-table">
+        <tr>
+            <th>Base URL</th>
+            <td><code>{{ request.url_root }}api</code></td>
+        </tr>
+        <tr>
+            <th>Content Type</th>
+            <td><code>application/json</code></td>
+        </tr>
+        <tr>
+            <th>Max File Size</th>
+            <td>16MB</td>
+        </tr>
+    </table>
+</div>
+
+<div class="card" id="authentication">
+    <h3>Authentication</h3>
+    <p>Currently, no authentication is required for API access. This may change in future versions.</p>
+</div>
+
+<div class="card api-section" id="endpoints">
+    <h3>Endpoints</h3>
+
+    <div class="api-endpoint" id="post-parse">
+        <h4>
+            <span class="method-badge method-post">POST</span>
+            Parse HAR File
+        </h4>
+        <div class="endpoint-url">/api/events/parse</div>
+
+        <p>Upload and parse a HAR file to extract Facebook events.</p>
+
+        <h5>Request</h5>
+        <table class="parameter-table">
+            <tr>
+                <th>Parameter</th>
+                <th>Type</th>
+                <th>Required</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>har_file</code></td>
+                <td>File</td>
+                <td class="required">Required</td>
+                <td>HAR file to parse (.har format)</td>
+            </tr>
+            <tr>
+                <td><code>debug</code></td>
+                <td>Boolean</td>
+                <td class="optional">Optional</td>
+                <td>Enable debug mode (default: false)</td>
+            </tr>
+        </table>
+
+        <h5>Example Request</h5>
+        <div class="code-block">curl -X POST {{ request.url_root }}api/events/parse \
+            -F "har_file=@example.har" \
+            -F "debug=true"</div>
+
+        <h5>Response</h5>
+        <div class="response-example">
+            <strong>Success (200):</strong>
+            <div class="code-block">{
+                "success": true,
+                "event_count": 24,
+                "parse_time_ms": 145,
+                "service_used": "local",
+                "events": [
+                {
+                "name": "Old Fashioned Month at Pour",
+                "datetime": "2025-10-04 9:00 PM CDT",
+                "location": "4400 S 70th St #100, Lincoln, NE",
+                "details": "May be an image...",
+                "link": "https://www.facebook.com/events/3095428473996911/",
+                "event_id": "3095428473996911"
+                }
+                ]
+                }</div>
+        </div>
+
+        <div class="response-example">
+            <strong>Error (400):</strong>
+            <div class="code-block">{
+                "success": false,
+                "error_message": "Invalid HAR file format",
+                "debug_info": "JSON decode error at line 15"
+                }</div>
+        </div>
+    </div>
+
+    <div class="api-endpoint" id="get-health">
+        <h4>
+            <span class="method-badge method-get">GET</span>
+            Health Check
+        </h4>
+        <div class="endpoint-url">/api/health</div>
+
+        <p>Check if the API service is running and healthy.</p>
+
+        <h5>Response</h5>
+        <div class="response-example">
+            <strong>Success (200):</strong>
+            <div class="code-block">{
+                "status": "healthy",
+                "service": "HAR Event Parser API",
+                "version": "1.0.0",
+                "timestamp": "2024-01-15T10:30:00Z"
+                }</div>
+        </div>
+    </div>
+
+    <div class="api-endpoint" id="get-info">
+        <h4>
+            <span class="method-badge method-get">GET</span>
+            Service Information
+        </h4>
+        <div class="endpoint-url">/api/info</div>
+
+        <p>Get information about the parser service configuration.</p>
+
+        <h5>Response</h5>
+        <div class="response-example">
+            <strong>Success (200):</strong>
+            <div class="code-block">{
+                "service_type": "local",
+                "service_info": "Local HAR Parser Service",
+                "supported_formats": [".har"],
+                "max_file_size_mb": 16,
+                "features": ["facebook_events", "json_output", "debug_mode"]
+                }</div>
+        </div>
+    </div>
+</div>
+
+<div class="card" id="data-format">
+    <h3>Data Format</h3>
+    <p>Events returned by the API follow this standardized format:</p>
+
+    <table class="parameter-table">
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><code>name</code></td>
+            <td>String</td>
+            <td>Event title/name</td>
+        </tr>
+        <tr>
+            <td><code>datetime</code></td>
+            <td>String</td>
+            <td>Event date and time in Central Time (CDT/CST)</td>
+        </tr>
+        <tr>
+            <td><code>location</code></td>
+            <td>String</td>
+            <td>Event location/venue (may be null)</td>
+        </tr>
+        <tr>
+            <td><code>details</code></td>
+            <td>String</td>
+            <td>Event description or cover photo caption</td>
+        </tr>
+        <tr>
+            <td><code>link</code></td>
+            <td>String</td>
+            <td>Facebook event URL</td>
+        </tr>
+        <tr>
+            <td><code>event_id</code></td>
+            <td>String</td>
+            <td>Facebook event ID</td>
+        </tr>
+    </table>
+</div>
+
+<div class="card" id="error-handling">
+    <h3>Error Handling</h3>
+    <p>The API uses standard HTTP status codes and provides detailed error messages:</p>
+
+    <table class="parameter-table">
+        <tr>
+            <th>Status Code</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>Success - Request processed successfully</td>
+        </tr>
+        <tr>
+            <td>400</td>
+            <td>Bad Request - Invalid input or file format</td>
+        </tr>
+        <tr>
+            <td>413</td>
+            <td>Payload Too Large - File exceeds size limit</td>
+        </tr>
+        <tr>
+            <td>500</td>
+            <td>Internal Server Error - Service error</td>
+        </tr>
+    </table>
+</div>
+
+<div class="card" id="examples">
+    <h3>Examples</h3>
+
+    <h4>Python</h4>
+    <div class="code-block">import requests
+
+        # Parse HAR file
+        with open('facebook_events.har', 'rb') as f:
+        response = requests.post(
+        '{{ request.url_root }}api/events/parse',
+        files={'har_file': f},
+        data={'debug': 'true'}
+        )
+
+        if response.status_code == 200:
+        result = response.json()
+        print(f"Found {result['event_count']} events")
+        for event in result['events']:
+        print(f"- {event['name']} on {event['datetime']}")
+        else:
+        print(f"Error: {response.json()['error_message']}")</div>
+
+    <h4>JavaScript</h4>
+    <div class="code-block">const formData = new FormData();
+        formData.append('har_file', fileInput.files[0]);
+        formData.append('debug', 'true');
+
+        fetch('{{ request.url_root }}api/events/parse', {
+        method: 'POST',
+        body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+        if (data.success) {
+        console.log(`Found ${data.event_count} events`);
+        data.events.forEach(event => {
+        console.log(`- ${event.name} on ${event.datetime}`);
+        });
+        } else {
+        console.error('Error:', data.error_message);
+        }
+        });</div>
+
+    <h4>cURL</h4>
+    <div class="code-block"># Parse HAR file
+        curl -X POST {{ request.url_root }}api/events/parse \
+        -F "har_file=@facebook_events.har" \
+        -F "debug=true"
+
+        # Health check
+        curl {{ request.url_root }}api/health
+
+        # Service info
+        curl {{ request.url_root }}api/info</div>
+</div>
+
+<div style="margin-top: 2rem;">
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">← Back to Upload</a>
+</div>
+{% endblock %}
