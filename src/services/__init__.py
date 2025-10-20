@@ -7,7 +7,7 @@ without breaking the web application code.
 """
 
 from abc import ABC, abstractmethod
-from typing import List, Dict, Optional, Union
+from typing import List, Dict, Union
 from dataclasses import dataclass
 from pathlib import Path
 

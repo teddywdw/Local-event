@@ -13,7 +13,7 @@ from pathlib import Path
 # Add src to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.services import HarParserFactory, ParserConfig
+from src.services import ParserConfig
 from src.services.config import get_config
 
 

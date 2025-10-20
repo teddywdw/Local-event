@@ -5,7 +5,6 @@ This service calls a remote API endpoint for HAR parsing.
 Perfect for microservice architectures and distributed deployments.
 """
 
-import json
 import requests
 from pathlib import Path
 from typing import Union
