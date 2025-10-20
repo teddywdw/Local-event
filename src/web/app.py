@@ -9,7 +9,6 @@ import csv
 import io
 from datetime import datetime
 from pathlib import Path
-from typing import Optional
 
 from flask import (
     Flask,
@@ -22,7 +21,6 @@ from flask import (
     make_response,
     session,
 )
-from werkzeug.utils import secure_filename
 
 # Import the service layer
 from services.config import get_config
@@ -142,7 +140,9 @@ def download_json():
     json_data = json.dumps(result["events"], indent=2)
     response = make_response(json_data)
     response.headers["Content-Type"] = "application/json"
-    response.headers["Content-Disposition"] = "attachment; filename=facebook_events.json"
+    response.headers["Content-Disposition"] = (
+        "attachment; filename=facebook_events.json"
+    )
     return response
 
 
@@ -159,14 +159,16 @@ def download_csv():
     writer.writerow(["Name", "DateTime", "Location", "Details", "Link", "Event ID"])
 
     for event in result["events"]:
-        writer.writerow([
-            event["name"],
-            event["datetime"],
-            event["location"] or "",
-            event["details"] or "",
-            event["link"],
-            event["event_id"],
-        ])
+        writer.writerow(
+            [
+                event["name"],
+                event["datetime"],
+                event["location"] or "",
+                event["details"] or "",
+                event["link"],
+                event["event_id"],
+            ]
+        )
 
     csv_data = output.getvalue()
     output.close()
@@ -194,10 +196,15 @@ def api_parse_events():
         return jsonify({"success": False, "error_message": "No file selected"}), 400
 
     if not file.filename.lower().endswith(".har"):
-        return jsonify({
-            "success": False,
-            "error_message": "Invalid file type. Only .har files are supported"
-        }), 400
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "error_message": "Invalid file type. Only .har files are supported",
+                }
+            ),
+            400,
+        )
 
     try:
         with tempfile.NamedTemporaryFile(delete=False, suffix=".har") as tmp_file:
@@ -211,15 +218,19 @@ def api_parse_events():
 
             os.unlink(tmp_file.name)
 
-            return jsonify({
-                "success": result.success,
-                "event_count": result.event_count,
-                "events": result.events,
-                "parse_time_ms": getattr(result, "parse_time_ms", 0),
-                "service_used": getattr(result, "service_used", "unknown"),
-                "error_message": result.error_message,
-                "debug_info": getattr(result, "debug_info", None) if debug else None,
-            })
+            return jsonify(
+                {
+                    "success": result.success,
+                    "event_count": result.event_count,
+                    "events": result.events,
+                    "parse_time_ms": getattr(result, "parse_time_ms", 0),
+                    "service_used": getattr(result, "service_used", "unknown"),
+                    "error_message": result.error_message,
+                    "debug_info": (
+                        getattr(result, "debug_info", None) if debug else None
+                    ),
+                }
+            )
 
     except Exception as e:
         return jsonify({"success": False, "error_message": str(e)}), 500
@@ -228,12 +239,14 @@ def api_parse_events():
 @app.route("/api/health")
 def api_health():
     """API health check endpoint."""
-    return jsonify({
-        "status": "healthy",
-        "service": "HAR Event Parser API",
-        "version": "1.0.0",
-        "timestamp": datetime.now().isoformat(),
-    })
+    return jsonify(
+        {
+            "status": "healthy",
+            "service": "HAR Event Parser API",
+            "version": "1.0.0",
+            "timestamp": datetime.now().isoformat(),
+        }
+    )
 
 
 @app.route("/api/info")
@@ -242,13 +255,15 @@ def api_info():
     config = get_config()
     parser = config.create_parser()
 
-    return jsonify({
-        "service_type": config.service_type,
-        "service_info": parser.get_service_info(),
-        "supported_formats": [".har"],
-        "max_file_size_mb": 16,
-        "features": ["facebook_events", "json_output", "debug_mode"],
-    })
+    return jsonify(
+        {
+            "service_type": config.service_type,
+            "service_info": parser.get_service_info(),
+            "supported_formats": [".har"],
+            "max_file_size_mb": 16,
+            "features": ["facebook_events", "json_output", "debug_mode"],
+        }
+    )
 
 
 if __name__ == "__main__":
