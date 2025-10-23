@@ -231,7 +231,13 @@
         <div class="events-section">
             <div class="section-header">
                 <h2 class="section-title">Happening Now</h2>
-                <p class="section-subtitle">Don't miss out on these amazing local events</p>
+                <p class="section-subtitle">
+                    {% if events %}
+                    Discover {{ events|length }} amazing local events
+                    {% else %}
+                    Don't miss out on these amazing local events
+                    {% endif %}
+                </p>
             </div>
 
             {% if error %}
@@ -239,20 +245,47 @@
             {% elif events %}
             <div class="events-grid">
                 {% for event in events %}
+                {% set event_emoji = '🎵' if 'music' in event.name.lower() or 'concert' in event.name.lower() or 'band'
+                in event.name.lower()
+                else '🍺' if 'bar' in event.name.lower() or 'drink' in event.name.lower() or 'pour' in
+                event.name.lower() or 'brewery' in event.name.lower()
+                else '🎭' if 'theater' in event.name.lower() or 'theatre' in event.name.lower() or 'show' in
+                event.name.lower()
+                else '🏟️' if 'arena' in event.location.lower() or 'stadium' in event.location.lower()
+                else '🎃' if 'halloween' in event.name.lower() or 'october' in event.name.lower() or 'spooky' in
+                event.name.lower()
+                else '🎪' if 'festival' in event.name.lower() or 'fest' in event.name.lower()
+                else '🏈' if 'nebraska' in event.name.lower() or 'husker' in event.name.lower() or 'football' in
+                event.name.lower()
+                else '🎮' if 'game' in event.name.lower() or 'arcade' in event.location.lower()
+                else '🎤' if 'comedy' in event.name.lower() or 'comedian' in event.name.lower()
+                else '🚗' if 'truck' in event.name.lower() or 'car' in event.name.lower() or 'wheels' in
+                event.name.lower()
+                else '🎉' %}
                 <div class="event-card" onclick="window.open('{{ event.link }}', '_blank')">
                     <div class="event-image">
-                        <div class="event-image-text">🎉</div>
+                        <div class="event-image-text">{{ event_emoji }}</div>
                     </div>
                     <div class="event-content">
                         <h3 class="event-title">{{ event.name }}</h3>
                         <div class="event-details">
                             <div class="event-detail">
                                 <div class="detail-icon">📅</div>
-                                <div class="detail-text">{{ event.datetime }}</div>
+                                <div class="detail-text">
+                                    {% set date_parts = event.datetime.split(' ') %}
+                                    {{ date_parts[0] }} at {{ date_parts[1] }} {{ date_parts[2] }}
+                                </div>
                             </div>
                             <div class="event-detail">
                                 <div class="detail-icon">📍</div>
-                                <div class="detail-text">{{ event.location or 'Location TBA' }}</div>
+                                <div class="detail-text">
+                                    {% set location = event.location or 'Location TBA' %}
+                                    {% if location|length > 50 %}
+                                    {{ location[:47] }}...
+                                    {% else %}
+                                    {{ location }}
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>

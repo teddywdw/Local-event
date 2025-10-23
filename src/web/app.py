@@ -65,15 +65,8 @@ def index():
         result = parser.parse_har_file(str(example_path), debug=False)
 
         if result.success and result.events:
-            # For now, just get the "Old Fashioned Month at Pour" event
-            target_event = None
-            for event in result.events:
-                if "Old Fashioned" in event.get("name", ""):
-                    target_event = event
-                    break
-
-            # If we found the target event, show it; otherwise show the first event
-            events_to_show = [target_event] if target_event else [result.events[0]]
+            # Show all events from the parser
+            events_to_show = result.events
         else:
             events_to_show = []
 
