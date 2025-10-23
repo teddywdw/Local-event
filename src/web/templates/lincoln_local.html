@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lincoln Local - Discover Events</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #484848;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 2rem 0 1rem;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+        }
+
+        .events-section {
+            background: white;
+            border-radius: 24px;
+            margin: 2rem 0 4rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .section-header {
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: #717171;
+            font-size: 1rem;
+        }
+
+        .events-grid {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 1px solid #f0f0f0;
+            cursor: pointer;
+        }
+
+        .event-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .event-image {
+            height: 180px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg,
+                    rgba(255, 154, 158, 0.1) 0%,
+                    rgba(254, 207, 239, 0.1) 50%,
+                    rgba(250, 208, 196, 0.1) 100%);
+        }
+
+        .event-image-text {
+            font-size: 3rem;
+            opacity: 0.6;
+            z-index: 1;
+            position: relative;
+        }
+
+        .event-content {
+            padding: 1.5rem;
+        }
+
+        .event-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .event-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .event-detail {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #717171;
+            font-size: 0.95rem;
+        }
+
+        .detail-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f7f7f7;
+            border-radius: 6px;
+            font-size: 0.8rem;
+        }
+
+        .detail-text {
+            flex: 1;
+            font-weight: 500;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #717171;
+        }
+
+        .empty-state h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #484848;
+        }
+
+        .error-message {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+
+            .section-header {
+                padding: 1.5rem 1.5rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Fun hover animations */
+        .event-card:hover .event-image {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%, #fd79a8 100%);
+        }
+
+        .event-card:hover .detail-icon {
+            background: #ff6b6b;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Lincoln Local</h1>
+            <p class="tagline">Discover amazing events happening in your city</p>
+        </header>
+
+        <div class="events-section">
+            <div class="section-header">
+                <h2 class="section-title">Happening Now</h2>
+                <p class="section-subtitle">Don't miss out on these amazing local events</p>
+            </div>
+
+            {% if error %}
+            <div class="error-message">{{ error }}</div>
+            {% elif events %}
+            <div class="events-grid">
+                {% for event in events %}
+                <div class="event-card" onclick="window.open('{{ event.link }}', '_blank')">
+                    <div class="event-image">
+                        <div class="event-image-text">🎉</div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">{{ event.name }}</h3>
+                        <div class="event-details">
+                            <div class="event-detail">
+                                <div class="detail-icon">📅</div>
+                                <div class="detail-text">{{ event.datetime }}</div>
+                            </div>
+                            <div class="event-detail">
+                                <div class="detail-icon">📍</div>
+                                <div class="detail-text">{{ event.location or 'Location TBA' }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="empty-state">
+                <h3>No events available</h3>
+                <p>Check back soon for exciting local events!</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+
+</html>
